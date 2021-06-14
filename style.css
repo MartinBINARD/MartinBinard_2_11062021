@@ -1,5 +1,124 @@
-* {
+/* Police Raleway */
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+/* formatage HTML */
+html, body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+/* Police, couleur texte et couleurs de fond */
+    /* Police et couleur de fond body */
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #ffffff;
+}
+
+/* header responsive et centré */
+header {
+    height: 100%;
+    width: 100%;
+    max-width: 1340px;
+    margin: auto;
+}
+
+/* formatage lien */
+.topbar a {
+    text-align: center;
+    text-decoration: none;
+    color: initial;
+}
+
+/* dimensions et agencement topbar */
+.topbar {
+    display: grid;
+    height: 90px;
+    grid-template-columns: 97px 5fr 162px 136px 136px;
+    grid-template-rows: 1fr;
+    grid-template-areas: "logo . housing activities sign-up";
+}
+
+    /* postion du logo et des liens dans la topbar sur l'axe horizontal*/
+.topbar__hint a {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#housing__link, #activities__link, #sign-up__link {
+    padding-top: 49px;
+    padding-bottom: 20px;
+}
+
+#housing, #activities, #sign-up {
+    grid-column-end: span 1;
+}
+
+#logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 90px;
+    grid-area: logo;
+}
+
+#housing {
+    grid-column-start: 3;
+    grid-row-start: 1;
+    grid-area: housing;
+}
+
+#activities {
+    grid-column-start: 4;
+    grid-area: activities;
+}
+
+#sign-up {
+    grid-column-start: 5;
+    grid-area: sign-up;
+}
+
+/* Postionnement liens axe vertical */
+.topbar__hint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+    /* LienS'inscrire" */
+
+#sign-up__link {
+    font-weight: bold;
+    color: #0065FC;
+}
+
+    /* Liens actif/inactif */
+.topbar__hint__upperline {
+    height: 2px;
+    width: 100%;
+}
+
+        /* liens actifs */
+.topbar .active > .topbar__hint__upperline {
+    background-color: #0065FC;
+}
+
+.topbar .active > a {
+    color: #0065FC;
+}
+
+        /* lien inactif survol */
+.topbar__hint:hover > .topbar__hint__upperline {
+    background-color: #0065FC;
+}
+
+/* survol liens */
+    /* survol "activités" */
+.topbar__hint:hover > #activities__link {
+    color: #0065FC;
+}
+
+    /* survol "S'inscrire" */
+.topbar__hint:hover > #sign-up__link {
+    color: black;
 }
