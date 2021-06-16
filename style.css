@@ -1,21 +1,20 @@
-/* Police Raleway */
+/* Font Raleway */
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
-/* formatage HTML */
+/* HTML formating */
 html, body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-/* Police, couleur texte et couleurs de fond */
-    /* Police et couleur de fond body */
+/* General font and genral background color*/
 body {
     font-family: 'Raleway', sans-serif;
     background-color: #ffffff;
 }
 
-/* header responsive et centré */
+/* centered responsive header */
 header, main {
     height: 90px;
     width: 100%;
@@ -23,14 +22,14 @@ header, main {
     margin: auto;
 }
 
-    /* formatage lien */
+    /* links layout */
 .topbar a {
     text-align: center;
     text-decoration: none;
     color: initial;
 }
 
-    /* dimensions et agencement topbar */
+    /* topbar dimensions and layout */
 .topbar {
     display: grid;
     height: 90px;
@@ -39,7 +38,7 @@ header, main {
     grid-template-areas: "logo . housing activities sign-up";
 }
 
-        /* postion du logo et des liens dans la topbar sur l'axe horizontal*/
+        /* logo and links horizontal layout inside the topbar */
 .topbar__hint a {
     box-sizing: border-box;
     width: 100%;
@@ -50,7 +49,7 @@ header, main {
     padding-bottom: 20px;
 }
 
-#housing, #activities, #sign-up {
+#topbar__hint--housing, #topbar__hint--activities, #topbar__hint--sign-up {
     grid-column-end: span 1;
 }
 
@@ -62,43 +61,43 @@ header, main {
     grid-area: logo;
 }
 
-#housing {
+#topbar__hint--housing {
     grid-column-start: 3;
     grid-row-start: 1;
     grid-area: housing;
 }
 
-#activities {
+#topbar__hint--activities {
     grid-column-start: 4;
     grid-area: activities;
 }
 
-#sign-up {
+#topbar__hint--sign-up {
     grid-column-start: 5;
     grid-area: sign-up;
 }
 
-    /* Postionnement liens axe vertical */
+    /* links vertical layout */
 .topbar__hint {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
 }
-        /* LienS'inscrire" */
+        /* sign-up link */
 
 #sign-up__link {
     font-weight: bold;
     color: #0065FC;
 }
 
-        /* Liens actif/inactif */
+        /* active/inactive links */
 .topbar__hint__upperline {
     height: 2px;
     width: 100%;
 }
 
-            /* liens actifs */
+            /* active link */
 .topbar .active > .topbar__hint__upperline {
     background-color: #0065FC;
 }
@@ -107,18 +106,18 @@ header, main {
     color: #0065FC;
 }
 
-            /* lien inactif survol */
+            /* hover inactive link */
 .topbar__hint:hover > .topbar__hint__upperline {
     background-color: #0065FC;
 }
 
-    /* survol liens */
-        /* survol "activités" */
+    /* hover links */
+        /* hover "activités" */
 .topbar__hint:hover > #activities__link {
     color: #0065FC;
 }
 
-        /* survol "S'inscrire" */
+        /* hover "S'inscrire" */
 .topbar__hint:hover > #sign-up__link {
     color: black;
 }
@@ -136,7 +135,7 @@ header, main {
     font-size: 16px;
 }
 
-/* barre de recherche */
+/* search-bar */
 .search-bar {
     border: 1px;
     border-color: #F2F2F2;
@@ -144,7 +143,7 @@ header, main {
     grid-template-columns: 52px 234px 134px 1fr;
     grid-template-rows: 1fr;
 }
-    /* icone map */
+    /* map icon */
 .search-bar__locate-icon {
     background-color: #F2F2F2;
     border-radius: 10px 0px 0px 10px;
@@ -156,7 +155,7 @@ header, main {
     align-items: center;
 }
 
-/* champs de recherche */
+/* search-bar area */
 .search-bar__area {
     border: none;
     border-top: 1px solid #F2F2F2;
@@ -166,17 +165,17 @@ header, main {
     font-size: 18px;
 }
 
-    /* bouton rechercher */
+    /* search button */
 .search-bar__button {
     border: none;
     border-radius: 0 10px 10px 0;
     background-color: #0065FC;
     color: white;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: bold;
 }
 
-/* filtre */
+/* Preferences filter */
 .filter {
     display: flex;
     flex-direction: row;
@@ -185,31 +184,133 @@ header, main {
     margin: 31px 0 35px 0;
 }
 
-/* police de tous les h2 du filtre */
-.filter h2 {
-    font-size: 21px;
-    height: 21px;
-}
-    /* titre filtre */
+    /* filter title */
 .filter > h2 {
     margin-left: 13px;
     margin-right: 33px;
+    font-size: 17px;
 }
-    /* filtres propiétés générales*/
-.filter__eco, .filter__family, .filter__romantic, .filter__pet {
+
+    /* general properties of each filter */
+.filter > div {
     display: flex;
     flex-direction: row;
     border: 1px solid #F2F2F2;
     border-radius: 50px;
+    margin-right: 24px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    background: linear-gradient(to right, #DEEBFF 50%, #ffffff 50%);
+    background-size: 200% 100%;
+    background-position: right;
+    transition: all 400ms ease;
 }
-        /* filtre éco */
+
+/* hover background color filter name transition effect */
+.filter > div:hover {
+    background-position: left;
+}
+
+        /* filter "économique" */
 .filter__eco {
     width: 194px;
 }
-            /* Centrage icone à l'intérieur de sa div */
-.filter__eco__icone, .filter__family__icone, .filter__romantic__icone, .filter__pet__icone {
+
+        /* filter "familial" */
+.filter__family {
+    width: 152px;
+}
+
+        /* filter "romantique" */
+.filter__romantic {
+    width: 184px;
+}
+
+        /* filter "animaux autorisés" */
+.filter__pet {
+    width: 242px;
+}
+
+            /* Centering icon inside its own div */
+.filter__eco__icon, .filter__family__icon, .filter__romantic__icon, .filter__pet__icon {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 48px;
+    width: 50px;
+    background-color: #DEEBFF ;
+    border-radius: 50px;
+    margin-right: 14px;
+}
+
+                /* color of filter icons */
+.filter i {
+    color: #0065FC;
+}
+
+/* info-bar */
+.info-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.info-bar__icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    width: 24px;
+    border: 1px solid #F2F2F2;
+    border-radius: 50px;
+    margin-bottom: 3px;
+    margin-right: 12px;
+    margin-left: 9px;
+
+}
+
+.info-bar i {
+    color: #0065FC;
+}
+
+/* Content section */
+.content {
+    display: grid;
+    grid-template-columns: 880px 40px 420px;
+    grid-template-rows: 625px 65px 550px;
+    background-color: beige;
+}
+
+/* layout children section */
+.content__housing {
+    background-color: #F2F2F2;
+    border-radius: 50px;
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+.content__popular {
+    background-color: #F2F2F2;
+    border-radius: 50px;
+    grid-column-start: 3;
+    grid-row-start: 1;
+}
+
+.content__activities {
+    background-color: cornflowerblue;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+}
+
+/* housing content title */
+.content__housing {
+    display: grid;
+    grid-template-columns: 40px 246px 31px 246px 31px 40px;
+    grid-template-rows: 47px 21px 23px 199px 30px 199px 43px 46px;
 }

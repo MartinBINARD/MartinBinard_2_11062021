@@ -3,9 +3,9 @@
 
 ***A fresh stylish vacation booking static webiste***
 
-**Commit #3**
+**Commit #5**
 
-*Add html structure and create css properties to _Main title_ and _Search bar_
-*Add html structure of filters
-*Add icones imported from _FontAwesome_
-*Add .gitignore
+* Add filters layout and cool css transitions
+* Add _info bar_ layout and css
+* Add html structure to sections to Marseille lodging
+* Work in progress : Section grid display

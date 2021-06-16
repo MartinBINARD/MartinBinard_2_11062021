@@ -16,17 +16,17 @@
     <header>
         <nav class="topbar">
             <a href="index.html" id="logo">
-                <img src="src/logo/Reservia.svg" alt="logo_Reservia" class="logo">
+                <img src="src/logo/Reservia.svg" alt="logo Reservia" class="logo">
             </a>
-            <div class="topbar__hint active" id="housing">
+            <div class="topbar__hint active" id="topbar__hint--housing">
                 <div class="topbar__hint__upperline"></div>
                 <a href="#housing" id="housing__link">Hébergement</a>
             </div>
-            <div class="topbar__hint" id="activities">
+            <div class="topbar__hint" id="topbar__hint--activities">
                 <div class="topbar__hint__upperline"></div>
                 <a href="#activities" id="activities__link">Activités</a>
             </div>
-            <div class="topbar__hint" id="sign-up">
+            <div class="topbar__hint" id="topbar__hint--sign-up">
                 <div class="topbar__hint__upperline"></div>
                 <a href="#" id="sign-up__link">S'inscrire</a>
             </div>
@@ -35,42 +35,119 @@
 
     <!-- main activities + -->
     <main>
+
+        <!-- main title -->
         <div class="main-title">
             <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
             <p>En plein centre ville ou en pleine nature</p>
         </div>
+
+        <!-- search-bar -->
         <div class="search-bar">
             <div class="search-bar__locate-icon"><i class="fas fa-map-marker-alt"></i></div>
             <input type="text" placeholder="Marseille, France" class="search-bar__area">
             <button class="search-bar__button">Rechercher</button>
         </div>
+
+        <!-- Filter -->
         <div class="filter">
             <h2>Filtres</h2>
             <div class="filter__eco">
-                <div class="filter__eco__icone">
+                <div class="filter__eco__icon">
                     <i class="fas fa-money-bill-wave"></i>
                 </div>
-                <h2>Économique</h2>
+                Économique
             </div>
             <div class="filter__family">
-                <div class="filter__family__icone">
+                <div class="filter__family__icon">
                     <i class="fas fa-child"></i>
                 </div>
-                <h2>Familial</h2>
+                Familial
             </div>
             <div class="filter__romantic">
-                <div class="filter__romantic__icone">
+                <div class="filter__romantic__icon">
                     <i class="fas fa-heart"></i>
                 </div>
-                <h2>Romantique</h2>
+                Romantique
             </div>
             <div class="filter__pet">
-                <div class="filter__pet__icone">
+                <div class="filter__pet__icon">
                     <i class="fas fa-dog"></i>
                 </div>
-                <h2>Animaux autorisés</h2>
+                Animaux autorisés
             </div>
         </div>
+
+        <!-- info bar -->
+        <div class="info-bar">
+            <div class="info-bar__icon">
+                <i class="fas fa-info"></i>
+            </div>
+            <p>Plus de 500 logements sont disponibles dans cette ville</p>
+        </div>
+        <!-- content section -->
+        <section class="content">
+
+            <section class="content__housing">
+                <h2 id="housing">Hébergment à Marseille</h2>
+
+                <!-- <a href="#" id="content__housing__cannebiere">
+                    <img src="src/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Auberge la cannebière">
+                    <h3>Auberge la Cannebière</h3>
+                    <p>Nuit à partir de <strong>25€</strong></p>
+                    <div class="content__housing__cannebiere__rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                </a> -->
+<!-- 
+                <a href="#" id="content__housing__harbor">
+                    <img src="" alt="Hôtel du port">
+                    <h3>Hôtel du port</h3>
+                    <p>Nuit à partir de <strong>52€</strong></p>
+                    <div class="content__housing__cannebiere__rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                </a>
+
+                <a href="#" id="content__housing__mouettes">
+                    <img src="" alt="Hôtel les Mouettes">
+                    <h3>Hôtel Les Mouettes</h3>
+                    <p>Nuit à partir de <strong>76€</strong></p>
+                    <div class="content__housing__cannebiere__rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                </a>
+
+                <a href="#" id="content__housing__sea">
+                    <img src="" alt="Hôtel de la mer">
+                    <h3>Hôtel de la mer</h3>
+                    <p>Nuit à partir de <strong>46€</strong></p>
+                    <div class="content__housing__cannebiere__rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                </a>
+                
+                <a href="#" id="content__housing__panier">
+                    <img src="" alt="Auberge le panier">
+                    <h3>Auberge le panier</h3>
+                    <p>Nuit à partir de <strong>23€</strong></p>
+                    <div class="content__housing__cannebiere__rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                </a>
+
+                <a href="#" id="content__housing__amina">
+                    <img src="" alt="Hôtel chez Amina">
+                    <h3>Hôtel chez Amina</h3>
+                    <p>Nuit à partir de <strong>96€</strong></p>
+                    <div class="content__housing__cannebiere__rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                </a> -->
+
+                <!-- <p>Afficher plus</p> -->
+            </section>
+
+            <!-- section most popular -->
+            <section class="content__popular">
+                <h2>Les plus populaires</h2>
+            </section>
+            
+            <!-- section activities -->
+            <section class="content__activities">
+                <h2 id="activities">Activités à Marseille</h2>
+
+            </section>
+
+        </section>
     </main>
 
      <!-- footer about -->
