@@ -3,9 +3,7 @@
 
 ***A fresh stylish vacation booking static webiste***
 
-**Commit #5**
+**Commit #6**
 
-* Add filters layout and cool css transitions
-* Add _info bar_ layout and css
-* Add html structure to sections to Marseille lodging
-* Work in progress : Section grid display
+* Add css grid lodging cards and cool css transform
+* Work in progress : box shadow cards, popular and activities sections

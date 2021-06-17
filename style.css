@@ -132,7 +132,7 @@ header, main {
 
 .main-title p {
     margin: 0px 6px 19px;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 /* search-bar */
@@ -168,7 +168,7 @@ header, main {
     /* search button */
 .search-bar__button {
     border: none;
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 15px 15px 0;
     background-color: #0065FC;
     color: white;
     font-size: 17px;
@@ -257,6 +257,7 @@ header, main {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-bottom: 23px;
 }
 
 .info-bar__icon {
@@ -282,11 +283,26 @@ header, main {
 .content {
     display: grid;
     grid-template-columns: 880px 40px 420px;
-    grid-template-rows: 625px 65px 550px;
-    background-color: beige;
+    grid-template-rows: 626px 65px 550px;
+    background-color: coral;
 }
 
-/* layout children section */
+        /* hover content card  */
+.housing-container a:hover {
+    transform: scale(1.03);
+    transition: 600ms;
+}
+
+        /* rate stars content card */
+.blue {
+    color: #0065FC;
+}
+
+.grey {
+    color: #d9d9d9;
+}
+
+    /* layout children section */
 .content__housing {
     background-color: #F2F2F2;
     border-radius: 50px;
@@ -303,14 +319,119 @@ header, main {
 
 .content__activities {
     background-color: cornflowerblue;
-    grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column: 1 / 4;
     grid-row-start: 3;
 }
 
-/* housing content title */
+        /* housing content */
 .content__housing {
     display: grid;
-    grid-template-columns: 40px 246px 31px 246px 31px 40px;
-    grid-template-rows: 47px 21px 23px 199px 30px 199px 43px 46px;
+    grid-template-columns: 40px 800px 40px;
+    grid-template-rows: 91px 428px 107px;
+}
+
+            /* housing content title */
+.content__housing > h2 {
+    grid-column: 2 / 2;
+    grid-row-start: 1 / 1;
+    font-size: 21px;
+    margin: 0;
+    padding-top: 47px;
+}
+
+            /* container inside housing content */
+.housing-container {
+    grid-column: 2 / 2;
+    grid-row-start: 2 / 2;
+            /* layout housing-container cards */
+    display: grid;
+    grid-template-columns: 246px 31px 246px 31px 246px;
+    grid-template-rows: 199px 30px 199px;
+}
+
+            /* show-more link */
+#show-more {
+    grid-column: 2 / 2;
+    grid-row: 3 / 3;
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+    padding-top: 43px;
+    padding-left: 4px;
+}
+
+                /* layout inside a housing card */
+.housing-container a {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 5px;
+    grid-template-columns: 5px 236px 5px;
+    grid-template-rows: 5px 114px 75px 5px;
+    text-decoration: none;
+    color: initial;
+}
+
+                    /* layout of card description */
+.card-description {
+    margin: 5px 11px;
+}
+
+                    /* Scale image card and fit div to image */
+.housing-container img, .housing-container > a > div{
+    height: 114px;
+    width: 237px;
+    border-radius: 20px 20px 0 0;
+}
+
+img {
+    object-fit: cover;
+}
+
+                    /* layout description card */
+.housing-container h3, .housing-container p {
+    margin: 0;
+}
+
+.housing-container h3 {
+    font-size: 17px;
+}
+
+.housing-container p {
+    font-size: 13px;
+    margin-top: 6px;
+    margin-bottom: 5px;
+}
+
+/* layout of each cards */
+    /* 1st row */
+.housing-container__cannebiere {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+}
+
+.housing-container__harbor {
+    grid-column: 3 / 3;
+    grid-row: 1 / 1;
+}
+
+.housing-container__mouettes {
+    grid-column: 5 / 5;
+    grid-row: 1 / 1;
+}
+
+    /* 2nd row */
+.housing-container__sea {
+    grid-column: 1 / 1;
+    grid-row: 3 / 3;
+}
+
+.housing-container__panier {
+    grid-column: 3 / 3;
+    grid-row: 3 / 3;
+}
+
+.housing-container__amina {
+    grid-column: 5 / 5;
+    grid-row: 3 / 3;
 }
