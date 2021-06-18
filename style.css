@@ -13,6 +13,11 @@ body {
     font-family: 'Raleway', sans-serif;
     background-color: #ffffff;
 }
+/* general links properties */
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
 /* centered responsive header */
 header, main {
@@ -25,8 +30,6 @@ header, main {
     /* links layout */
 .topbar a {
     text-align: center;
-    text-decoration: none;
-    color: initial;
 }
 
     /* topbar dimensions and layout */
@@ -283,12 +286,13 @@ header, main {
 .content {
     display: grid;
     grid-template-columns: 880px 40px 420px;
-    grid-template-rows: 626px 65px 550px;
+    grid-template-rows: 626px;
+     /* 108px 445px; */
     background-color: coral;
 }
 
         /* hover content card  */
-.housing-container a:hover {
+.housing-container a:hover, .popular-container a:hover {
     transform: scale(1.03);
     transition: 600ms;
 }
@@ -296,10 +300,12 @@ header, main {
         /* rate stars content card */
 .blue {
     color: #0065FC;
+    font-size: 12px;
 }
 
 .grey {
     color: #d9d9d9;
+    font-size: 12px;
 }
 
     /* layout children section */
@@ -336,7 +342,7 @@ header, main {
     grid-row-start: 1 / 1;
     font-size: 21px;
     margin: 0;
-    padding-top: 47px;
+    padding-top: 44px;
 }
 
             /* container inside housing content */
@@ -350,10 +356,9 @@ header, main {
 }
 
             /* show-more link */
-#show-more {
+.show-more {
     grid-column: 2 / 2;
     grid-row: 3 / 3;
-    text-decoration: none;
     color: black;
     font-size: 17px;
     font-weight: bold;
@@ -368,12 +373,10 @@ header, main {
     padding: 5px;
     grid-template-columns: 5px 236px 5px;
     grid-template-rows: 5px 114px 75px 5px;
-    text-decoration: none;
-    color: initial;
 }
 
                     /* layout of card description */
-.card-description {
+.card-description-housing {
     margin: 5px 11px;
 }
 
@@ -394,7 +397,7 @@ img {
 }
 
 .housing-container h3 {
-    font-size: 17px;
+    font-size: 16px;
 }
 
 .housing-container p {
@@ -434,4 +437,114 @@ img {
 .housing-container__amina {
     grid-column: 5 / 5;
     grid-row: 3 / 3;
+}
+
+/* content popular */
+.content__popular {
+    display: grid;
+    grid-template-columns: 420px;
+    grid-template-rows: 93px 532px;
+}
+
+.content__popular__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 40px 26px;
+}
+
+.content__popular h2 {
+    font-size: 21px;
+    margin: 0;
+}
+
+.content__popular__title i {
+    font-size: 22px;
+}
+
+.popular-container {
+    border-radius: 50px;
+}
+
+    /* layout container popular cards */
+.popular-container {
+    display: grid;
+    grid-template-columns: 37px 343px 40px;
+    grid-template-rows: 144px 33px 144px 33px 144px 34px;
+}
+
+    /* postion of each popular cards */
+/* row #1 */
+.popular-container__soleil-du-matin {
+    grid-column: 2 / 2;
+    grid-row: 1 / 1;
+}
+/* row #2 */
+.popular-container__coeur-de-l-eau {
+    grid-column: 2 / 2;
+    grid-row: 3 / 3;
+}
+/* row #3 */
+.popular-container__hotel-bleu-blanc {
+    grid-column: 2 / 2;
+    grid-row: 5 / 5;
+}
+    /* general properties of popular cards */
+
+/* common margin and appearence */
+.popular-container a {
+    background-color: white;
+    padding: 5px;
+    border-radius: 20px;
+    /* layout inside of each popular card */
+    display: grid;
+    grid-template-columns: 127px 20px 180px;
+    grid-template-rows: 134px;
+
+}
+
+    /* popular-container image scale */
+.popular-container img {
+    width: 127px;
+    height: 134px;
+    border-radius: 20px 0 0 20px;
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+}
+
+/* layout card description popular */
+.card-description-popular {
+    padding-right: 45px;
+    grid-column: 3 / 3;
+    grid-row: 1 / 1;
+}
+
+.popular-container h3 {
+    font-size: 16px;
+    margin: 18px 0 0;
+
+}
+
+.popular-container p {
+    font-size: 13px;
+    margin-top: 11px;
+    margin-bottom: 26px;
+}
+
+/* Activities content */
+/* delete default title margin */
+.content__activities {
+    height: 553px;
+}
+.content__activities h2 {
+    margin: 63px 0 23px;
+}
+
+/* layout desktop grid Activities container */
+.container__activities {
+    height: 445px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 43px;
+    background-color: teal;
 }

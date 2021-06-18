@@ -3,7 +3,8 @@
 
 ***A fresh stylish vacation booking static webiste***
 
-**Commit #6**
+**Commit #7**
 
-* Add css grid lodging cards and cool css transform
-* Work in progress : box shadow cards, popular and activities sections
+* Add html and css popular activities content
+* Split main section in 2 separate css grid (lodging/popular, activities)
+* Work in progress : box shadow cards, activities sections and footer
