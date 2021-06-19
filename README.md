@@ -3,8 +3,10 @@
 
 ***A fresh stylish vacation booking static webiste***
 
-**Commit #7**
+**Commit #8**
 
-* Add html and css popular activities content
-* Split main section in 2 separate css grid (lodging/popular, activities)
-* Work in progress : box shadow cards, activities sections and footer
+* Finish css grid to Activities
+* Overlap text Activities cards to image 
+* Transform <div> lodging/popular into a <section> to pass W3C validator
+* Clean up the HTML/CSS errors detected by the W3C validator
+* Work in progress : box shadow cards and footer
