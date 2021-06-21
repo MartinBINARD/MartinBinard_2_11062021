@@ -3,10 +3,9 @@
 
 ***A fresh stylish vacation booking static webiste***
 
-**Commit #8**
+**Commit #9**
 
-* Finish css grid to Activities
-* Overlap text Activities cards to image 
-* Transform <div> lodging/popular into a <section> to pass W3C validator
-* Clean up the HTML/CSS errors detected by the W3C validator
-* Work in progress : box shadow cards and footer
+* Finished the desktop website version
+* Rename content in content-lodging for SEO
+* Passed the W3C validator
+* Work in progress : Responisve (phone headers, lodging, activities and footer layout, mediaqueries img)

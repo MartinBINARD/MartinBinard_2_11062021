@@ -21,10 +21,13 @@ a {
 
 /* centered responsive header */
 header, main {
-    height: 90px;
     width: 100%;
     max-width: 1340px;
     margin: auto;
+}
+
+header {
+    height: 90px;
 }
 
     /* links layout */
@@ -38,7 +41,6 @@ header, main {
     height: 90px;
     grid-template-columns: 97px 5fr 162px 136px 136px;
     grid-template-rows: 1fr;
-    grid-template-areas: "logo . housing activities sign-up";
 }
 
         /* logo and links horizontal layout inside the topbar */
@@ -61,23 +63,19 @@ header, main {
     flex-direction: column;
     justify-content: flex-end;
     height: 90px;
-    grid-area: logo;
 }
 
 #topbar__hint--housing {
     grid-column-start: 3;
     grid-row-start: 1;
-    grid-area: housing;
 }
 
 #topbar__hint--activities {
     grid-column-start: 4;
-    grid-area: activities;
 }
 
 #topbar__hint--sign-up {
     grid-column-start: 5;
-    grid-area: sign-up;
 }
 
     /* links vertical layout */
@@ -206,10 +204,11 @@ header, main {
     font-weight: bold;
     text-align: center;
     align-items: center;
+    /* filling bar transition from left to right */
     background: linear-gradient(to right, #DEEBFF 50%, #ffffff 50%);
     background-size: 200% 100%;
     background-position: right;
-    transition: all 400ms ease;
+    transition: all 400ms ease-in-out;
 }
 
 /* hover background color filter name transition effect */
@@ -283,18 +282,42 @@ header, main {
 }
 
 /* *******SECTION #1****** */
-/* Content section */
-.content {
+/* .content-lodging section */
+.content-lodging {
     display: grid;
     grid-template-columns: 880px 40px 420px;
     grid-template-rows: 626px;
-    background-color: coral;
+    /* background-color: coral; */
 }
 
-        /* hover content card  */
-.housing-container a:hover, .popular-container a:hover {
+        /* Common BOX SHADOW card properties */
+.housing-container a, .popular-container a, .content-activities a {
+    transition: all 600ms ease-in-out;
+}
+
+        /* Lodging BOX SHADOW card properties */
+.housing-container a, .popular-container a {
+    box-shadow: 1px 1px 2px 2px rgba(192, 192, 192, 0.2);
+}
+
+        /* Activities BOX SHADOW card properties */
+.content-activities a {
+    box-shadow: 0px 5px 7px 7px rgba(192, 192, 192, 0.2);
+}
+
+        /* Common HOVER content card  */
+.housing-container a:hover, .popular-container a:hover, .content-activities a:hover {
     transform: scale(1.03);
-    transition: 600ms;
+}
+
+            /* Lodging HOVER OPACITY BOX SHADOW card properties */
+.housing-container a:hover, .popular-container a:hover {
+    box-shadow: 1px 1px 2px 2px rgba(192, 192, 192, 1);
+}
+
+            /* Activities HOVER OPACITY BOX SHADOW card property */
+.content-activities a:hover {
+    box-shadow: 0px 5px 7px 7px rgba(192, 192, 192, 1);
 }
 
         /* rate stars content card */
@@ -321,12 +344,6 @@ header, main {
     border-radius: 50px;
     grid-column-start: 3;
     grid-row-start: 1;
-}
-
-.content__activities {
-    background-color: cornflowerblue;
-    grid-column: 1 / 4;
-    grid-row-start: 3;
 }
 
         /* housing content */
@@ -479,11 +496,13 @@ img {
     grid-column: 2 / 2;
     grid-row: 1 / 1;
 }
+
 /* row #2 */
 .popular-container__coeur-de-l-eau {
     grid-column: 2 / 2;
     grid-row: 3 / 3;
 }
+
 /* row #3 */
 .popular-container__hotel-bleu-blanc {
     grid-column: 2 / 2;
@@ -534,7 +553,7 @@ img {
 /* ****SECTION #2***** */
 /* Activities content */
 /* delete default title margin */
-.content__activities h2 {
+.content-activities h2 {
     margin: 65px 0 23px;
 }
 
@@ -563,7 +582,7 @@ img {
 }
 
 /* overlap title of Activities on image */
-.content__activities h3 {
+.content-activities h3 {
     font-size: 16px;
     font-weight: bold;
     height: 16px;
@@ -606,4 +625,40 @@ img {
 .container__activities__parc-longchamp {
     grid-column: 4 / 4;
     grid-row: 3 / 5;
+}
+
+/* FOOTER */
+footer {
+    height: 218px;
+    width: 100%;
+    background-color: #F2F2F2;
+}
+
+.footer__content {
+    height: 100%;
+    margin: 60px auto 0 auto;
+    max-width: 1340px;
+    /* background-color: brown; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer__content > div {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+footer h2 {
+    font-size: 17px;
+    margin: 45px 0 0 0;
+}
+
+footer a {
+    font-size: 16px;
+    margin: 15px 0 0 0;
+}
+
+footer a:hover {
+    color: #0065FC;
 }
