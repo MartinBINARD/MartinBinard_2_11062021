@@ -39,7 +39,7 @@ header {
 .topbar {
     display: grid;
     height: 90px;
-    grid-template-columns: 97px 5fr 162px 136px 136px;
+    grid-template-columns: 6.8% 5fr 12.09% 10.15% 10.15%;
     grid-template-rows: 1fr;
 }
 
@@ -49,12 +49,12 @@ header {
     width: 100%;
 }
 
-#housing__link, #activities__link, #sign-up__link {
+.topbar > div > a {
     padding-top: 49px;
     padding-bottom: 20px;
 }
 
-#topbar__hint--housing, #topbar__hint--activities, #topbar__hint--sign-up {
+.topbar > div {
     grid-column-end: span 1;
 }
 
@@ -138,19 +138,21 @@ header {
 
 /* search-bar */
 .search-bar {
+    height: 50px;
+    width: 100%;
     border: 1px;
     border-color: #F2F2F2;
     display: grid;
-    grid-template-columns: 52px 234px 134px 1fr;
+    grid-template-columns: 4% 17.5% 10% 1fr;
     grid-template-rows: 1fr;
 }
     /* map icon */
 .search-bar__locate-icon {
     background-color: #F2F2F2;
-    border-radius: 10px 0px 0px 10px;
-    margin-left: 4px;
-    height: 51px;
-    width: 52px;
+    border-radius: 15px 0 0 15px;
+    margin-left: 7.47%;
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -162,7 +164,7 @@ header {
     border-top: 1px solid #F2F2F2;
     border-bottom: 1px solid #F2F2F2;
     border: 1px;
-    padding: 0 0 0 17px;
+    padding: 0 0 0 7.25%;
     font-size: 18px;
 }
 
@@ -180,25 +182,26 @@ header {
 .filter {
     display: flex;
     flex-direction: row;
-    width: 929px;
-    height: 50px;
-    margin: 31px 0 35px 0;
+    width: 69.33%;
+    height: 100%;
+    margin: 2.31% 0 2.61% 0;
 }
 
     /* filter title */
 .filter > h2 {
-    margin-left: 13px;
-    margin-right: 33px;
+    margin-left: 1.4%;
+    margin-right: 3.56%;
     font-size: 17px;
 }
 
     /* general properties of each filter */
 .filter > div {
+    height: 50px;
     display: flex;
     flex-direction: row;
     border: 1px solid #F2F2F2;
-    border-radius: 50px;
-    margin-right: 24px;
+    border-radius: 500px;
+    margin-right: 2.59%;
     cursor: pointer;
     font-size: 17px;
     font-weight: bold;
@@ -206,7 +209,7 @@ header {
     align-items: center;
     /* filling bar transition from left to right */
     background: linear-gradient(to right, #DEEBFF 50%, #ffffff 50%);
-    background-size: 200% 100%;
+    background-size: 200%;
     background-position: right;
     transition: all 400ms ease-in-out;
 }
@@ -218,35 +221,35 @@ header {
 
         /* filter "économique" */
 .filter__eco {
-    width: 194px;
+    width: 22.49%;
 }
 
         /* filter "familial" */
 .filter__family {
-    width: 152px;
+    width: 17.95%;
 }
 
         /* filter "romantique" */
 .filter__romantic {
-    width: 184px;
+    width: 22.38%;
 }
 
         /* filter "animaux autorisés" */
 .filter__pet {
-    width: 242px;
+    width: 31.1%;
 }
 
             /* Centering icon inside its own div */
-.filter__eco__icon, .filter__family__icon, .filter__romantic__icon, .filter__pet__icon {
+.filter i {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 48px;
+    height: 100%;
     width: 50px;
     background-color: #DEEBFF ;
-    border-radius: 50px;
-    margin-right: 14px;
+    border-radius: 500px;
+    margin-right: 8%;
 }
 
                 /* color of filter icons */
@@ -270,10 +273,10 @@ header {
     height: 24px;
     width: 24px;
     border: 1px solid #F2F2F2;
-    border-radius: 50px;
     margin-bottom: 3px;
     margin-right: 12px;
     margin-left: 9px;
+    border-radius: 50%;
 
 }
 
@@ -285,9 +288,11 @@ header {
 /* .content-lodging section */
 .content-lodging {
     display: grid;
-    grid-template-columns: 880px 40px 420px;
+    grid-template-columns: 880px 420px;
+    column-gap: 40px;
     grid-template-rows: 626px;
-    /* background-color: coral; */
+    grid-template-areas: "housing popular";
+    background-color: coral;
 }
 
         /* Common BOX SHADOW card properties */
@@ -333,33 +338,28 @@ header {
 
     /* layout children section */
 .content__housing {
+    grid-area: "housing";
     background-color: #F2F2F2;
     border-radius: 50px;
-    grid-column-start: 1;
-    grid-row-start: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 45px 40px;
 }
 
 .content__popular {
+    grid-area: "popular";
     background-color: #F2F2F2;
     border-radius: 50px;
-    grid-column-start: 3;
-    grid-row-start: 1;
-}
-
-        /* housing content */
-.content__housing {
-    display: grid;
-    grid-template-columns: 40px 800px 40px;
-    grid-template-rows: 91px 428px 107px;
+    display: flex;
+    flex-direction: column;
 }
 
             /* housing content title */
 .content__housing > h2 {
-    grid-column: 2 / 2;
-    grid-row: 1 / 1;
     font-size: 21px;
     margin: 0;
-    padding-top: 44px;
+    padding-bottom: 23px;
 }
 
             /* container inside housing content */
@@ -457,11 +457,11 @@ img {
 }
 
 /* content popular */
-.content__popular {
+/* .content__popular {
     display: grid;
     grid-template-columns: 420px;
     grid-template-rows: 93px 532px;
-}
+} */
 
 .content__popular__title {
     display: flex;
@@ -516,10 +516,10 @@ img {
     padding: 5px;
     border-radius: 20px;
     /* layout inside of each popular card */
-    display: grid;
-    grid-template-columns: 127px 20px 180px;
-    grid-template-rows: 134px;
-
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
     /* popular-container image scale */
@@ -533,7 +533,7 @@ img {
 
 /* layout card description popular */
 .card-description-popular {
-    padding-right: 45px;
+    padding: 0 45px 9px 20px;
     grid-column: 3 / 3;
     grid-row: 1 / 1;
 }
@@ -634,6 +634,7 @@ footer {
     background-color: #F2F2F2;
 }
 
+    /* layout footer desktop */
 .footer__content {
     height: 100%;
     margin: 60px auto 0 auto;
@@ -641,14 +642,30 @@ footer {
     /* background-color: brown; */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-area: "about accomodations assistance";
 }
 
+.footer__content__about {
+    grid-area: "about";
+}
+
+.footer__content__our-accommodations {
+    grid-area: "accomodations";
+}
+
+.footer__content__assistance {
+    grid-area: "assistance";
+}
+
+    /* flexbox inside of each details footer elements */
 .footer__content > div {
     margin: 0;
     display: flex;
     flex-direction: column;
 }
 
+    /* margin footer link */
 footer h2 {
     font-size: 17px;
     margin: 45px 0 0 0;
@@ -661,4 +678,34 @@ footer a {
 
 footer a:hover {
     color: #0065FC;
+}
+
+/* RESPONSIVE */
+
+/* RESPONSIVE LODGING */
+/* popular section above lodging section */
+@media screen and (max-width: 1340px) {
+    .content-lodging {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 30px;
+        grid-template-areas: 
+        "popular"
+        "housing";
+    }
+
+    .popular-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        column-gap: 20px;
+    }
+}
+
+/* RESPONSIVE FOOTER */
+@media screen and (max-width: 600px) {
+    .footer__content {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-area: "about accomodations assistance";
+    }
 }

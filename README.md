@@ -3,9 +3,9 @@
 
 ***A fresh stylish vacation booking static webiste***
 
-**Commit #9**
+**Commit #10**
 
-* Finished the desktop website version
-* Rename content in content-lodging for SEO
-* Passed the W3C validator
+* Use more % to width to help responsiveness
+* Replace css with flexbox to : content__housing, content__popular, filter
+* Remove parent div to map icon and filters icons
 * Work in progress : Responisve (phone headers, lodging, activities and footer layout, mediaqueries img)
