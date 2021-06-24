@@ -52,35 +52,38 @@
         <!-- Filter -->
         <div class="filter">
             <h2>Filtres</h2>
-            <div class="filter__eco">
-                <i class="fas fa-money-bill-wave"></i>
-                Économique
-            </div>
-            <div class="filter__family">
-                <i class="fas fa-child"></i>
-                Familial
-            </div>
-            <div class="filter__romantic">
-                <i class="fas fa-heart"></i>
-                Romantique
-            </div>
-            <div class="filter__pet">
-                <i class="fas fa-dog"></i>
-                Animaux autorisés
-            </div>
+
+            <!-- filter-list -->
+            <ul class="filter-list">
+                <li class="filter-tab">
+                    <i class="fas fa-money-bill-wave"></i>
+                    Économique
+                </li>
+                <li class="filter-tab">
+                    <i class="fas fa-child"></i>
+                    Familial
+                </li>
+                <li class="filter-tab">
+                    <i class="fas fa-heart"></i>
+                    Romantique
+                </li>
+                <li class="filter-tab">
+                    <i class="fas fa-dog"></i>
+                    Animaux autorisés
+                </li>
+            </ul>
+
         </div>
 
         <!-- info bar -->
         <div class="info-bar">
-            <div class="info-bar__icon">
-                <i class="fas fa-info"></i>
-            </div>
+            <i class="fas fa-info"></i>
             <p>Plus de 500 logements sont disponibles dans cette ville</p>
         </div>
 
         <!-- section content SECTION#1 -->
         <section class="content-lodging">
-            <!-- housing content -->
+            <!-- section housing -->
             <div class="content__housing">
 
                 <h2 id="housing">Hébergement à Marseille</h2>
@@ -162,13 +165,16 @@
 
             <!-- section most popular -->
             <div class="content__popular">
-                <div class="content__popular__title">
-                    <h2>Les plus populaires</h2>
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <!-- popular container -->
+                
+                <!-- cards-popular container -->
                 <div class="popular-container">
+                    
                     <!-- row #1 -->
+                    <div class="content__popular__title">
+                        <h2>Les plus populaires</h2>
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <!-- row #2 -->
                     <a href="#" class="popular-container__soleil-du-matin">
                         <div class="popular-container__soleil-du-matin__img">
                             <img src="src/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Hôtel Le soleil du matin">
@@ -179,7 +185,7 @@
                             <div class="popular-container__soleil-du-matin__rating"><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i></div>
                         </div>
                     </a>
-                    <!-- row #2 -->
+                    <!-- row #3 -->
                     <a href="#" class="popular-container__coeur-de-l-eau">
                         <div class="popular-container__coeur-de-l-eau__img">
                             <img src="src/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Au coeur de l'eau Chambres d'hôtes">
@@ -190,7 +196,7 @@
                             <div class="popular-container__coeur-de-l-eau__rating"><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star grey"></i></div>
                         </div>
                     </a>
-                    <!-- row #3 -->
+                    <!-- row #4 -->
                     <a href="#" class="popular-container__hotel-bleu-blanc">
                         <div class="popular-container__hotel-bleu-blanc__img">
                             <img src="src/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Hôtel Tout bleu et Blanc">
@@ -201,8 +207,8 @@
                             <div class="popular-container__hotel-bleu-blanc__rating"><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star grey"></i></div>
                         </div>
                     </a>
-
                 </div>
+
             </div>
         </section>    
         <!-- section activities SECTION#2 -->

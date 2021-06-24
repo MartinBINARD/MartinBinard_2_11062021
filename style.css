@@ -178,30 +178,41 @@ header {
     font-weight: bold;
 }
 
+/* FILTER */
+/* line up filter content */
+
 /* Preferences filter */
 .filter {
-    display: flex;
-    flex-direction: row;
-    width: 69.33%;
-    height: 100%;
-    margin: 2.31% 0 2.61% 0;
+    width: 100%;
+    margin: 31px 0 0 13px;
 }
 
     /* filter title */
-.filter > h2 {
-    margin-left: 1.4%;
-    margin-right: 3.56%;
+.filter h2 {
+    display: inline;
     font-size: 17px;
+    margin: 0;
+}
+
+    /* filter-list */
+.filter-list {
+    list-style: none;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+    margin: 0;
 }
 
     /* general properties of each filter */
-.filter > div {
+.filter-tab {
     height: 50px;
     display: flex;
     flex-direction: row;
     border: 1px solid #F2F2F2;
     border-radius: 500px;
-    margin-right: 2.59%;
+    margin: 13px 0 0 24px;
+    padding-right: 20px;
     cursor: pointer;
     font-size: 17px;
     font-weight: bold;
@@ -215,28 +226,8 @@ header {
 }
 
 /* hover background color filter name transition effect */
-.filter > div:hover {
+.filter-tab:hover {
     background-position: left;
-}
-
-        /* filter "économique" */
-.filter__eco {
-    width: 22.49%;
-}
-
-        /* filter "familial" */
-.filter__family {
-    width: 17.95%;
-}
-
-        /* filter "romantique" */
-.filter__romantic {
-    width: 22.38%;
-}
-
-        /* filter "animaux autorisés" */
-.filter__pet {
-    width: 31.1%;
 }
 
             /* Centering icon inside its own div */
@@ -245,11 +236,12 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 50px;
     width: 50px;
+    margin-right: 12px;
     background-color: #DEEBFF ;
     border-radius: 500px;
-    margin-right: 8%;
+    /* margin-right: 8%; */
 }
 
                 /* color of filter icons */
@@ -258,30 +250,21 @@ header {
 }
 
 /* info-bar */
-.info-bar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 23px;
+.info-bar p{
+    display: inline;
+    margin:0;
 }
 
-.info-bar__icon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 24px;
-    width: 24px;
-    border: 1px solid #F2F2F2;
-    margin-bottom: 3px;
-    margin-right: 12px;
-    margin-left: 9px;
-    border-radius: 50%;
-
+.info-bar {
+    margin: 40px 0 40px 9px;
 }
 
 .info-bar i {
     color: #0065FC;
+    border: 1px solid #F2F2F2;
+    border-radius: 5000px;
+    padding: 3px 7px;
+
 }
 
 /* *******SECTION #1****** */
@@ -289,7 +272,7 @@ header {
 .content-lodging {
     display: grid;
     grid-template-columns: 880px 420px;
-    column-gap: 40px;
+    gap: 40px;
     grid-template-rows: 626px;
     grid-template-areas: "housing popular";
     background-color: coral;
@@ -338,7 +321,7 @@ header {
 
     /* layout children section */
 .content__housing {
-    grid-area: "housing";
+    grid-area: housing;
     background-color: #F2F2F2;
     border-radius: 50px;
     display: flex;
@@ -348,11 +331,13 @@ header {
 }
 
 .content__popular {
-    grid-area: "popular";
+    grid-area: popular;
     background-color: #F2F2F2;
     border-radius: 50px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
             /* housing content title */
@@ -364,18 +349,19 @@ header {
 
             /* container inside housing content */
 .housing-container {
-    grid-column: 2 / 2;
-    grid-row: 2 / 2;
             /* layout housing-container cards */
+    width: 100%;
     display: grid;
-    grid-template-columns: 246px 31px 246px 31px 246px;
-    grid-template-rows: 199px 30px 199px;
+    grid-template-columns: 246px 246px 246px;
+    grid-template-rows: 199px 199px;
+    gap: 30px;
+    grid-template-areas: 
+    "cannebiere harbor mouettes"
+    "sea panier amina";
 }
 
             /* show-more link */
 .show-more {
-    grid-column: 2 / 2;
-    grid-row: 3 / 3;
     color: black;
     font-size: 17px;
     font-weight: bold;
@@ -388,17 +374,18 @@ header {
     background-color: #ffffff;
     border-radius: 20px;
     padding: 5px;
-    grid-template-columns: 5px 236px 5px;
-    grid-template-rows: 5px 114px 75px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
                     /* layout of card description */
 .card-description-housing {
-    margin: 5px 11px;
+    padding-left: 11px;
 }
 
                     /* Scale image card and fit div to image */
-.housing-container img, .housing-container > a > div{
+.housing-container img {
     height: 114px;
     width: 237px;
     border-radius: 20px 20px 0 0;
@@ -408,112 +395,105 @@ img {
     object-fit: cover;
 }
 
+.housing-container img, .housing-container > a > div {
+    width: 100%;
+}
                     /* layout description card */
 .housing-container h3, .housing-container p {
     margin: 0;
 }
 
-.housing-container h3 {
+/* .housing-container h3 {
     font-size: 16px;
-}
+} */
 
 .housing-container p {
-    font-size: 13px;
-    margin-top: 6px;
-    margin-bottom: 5px;
+    /* font-size: 13px; */
+    margin: 5px 0 5px 0; 
 }
 
-/* layout of each cards */
+/* layout of each housing cards */
     /* 1st row */
 .housing-container__cannebiere {
-    grid-column: 1 / 1;
-    grid-row: 1 / 1;
+    grid-area: cannebiere;
 }
 
 .housing-container__harbor {
-    grid-column: 3 / 3;
-    grid-row: 1 / 1;
+    grid-area: harbor;
 }
 
 .housing-container__mouettes {
-    grid-column: 5 / 5;
-    grid-row: 1 / 1;
+    grid-area: mouettes;
 }
 
     /* 2nd row */
 .housing-container__sea {
-    grid-column: 1 / 1;
-    grid-row: 3 / 3;
+    grid-area: sea;
 }
 
 .housing-container__panier {
-    grid-column: 3 / 3;
-    grid-row: 3 / 3;
+    grid-area: panier;
 }
 
 .housing-container__amina {
-    grid-column: 5 / 5;
-    grid-row: 3 / 3;
+    grid-area: amina;
 }
 
-/* content popular */
-/* .content__popular {
-    display: grid;
-    grid-template-columns: 420px;
-    grid-template-rows: 93px 532px;
-} */
-
 .content__popular__title {
+    grid-area: popular-title;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    margin: 40px 40px 26px;
+    padding-top: 7.29%;
 }
 
 .content__popular h2 {
     font-size: 21px;
     margin: 0;
+    padding-top: 7%;
 }
 
 .content__popular__title i {
     font-size: 22px;
-}
-
-.popular-container {
-    border-radius: 50px;
+    padding-top: 7%;
 }
 
     /* layout container popular cards */
 .popular-container {
+    grid-area: popular-cards;
+    border-radius: 50px;
+    width: auto;
     display: grid;
-    grid-template-columns: 37px 343px 40px;
-    grid-template-rows: 144px 33px 144px 33px 144px 34px;
+    grid-template-columns: 343px;
+    grid-template-rows: 60px 144px 144px 144px;
+    row-gap: 33px;
+    grid-template-areas:
+    "popular-title"
+    "soleil-du-matin"
+    "coeur-de-l-eau"
+    "hotel-bleu-blanc";
 }
 
     /* postion of each popular cards */
 /* row #1 */
 .popular-container__soleil-du-matin {
-    grid-column: 2 / 2;
-    grid-row: 1 / 1;
+    grid-area: soleil-du-matin;
 }
 
 /* row #2 */
 .popular-container__coeur-de-l-eau {
-    grid-column: 2 / 2;
-    grid-row: 3 / 3;
+    grid-area: coeur-de-l-eau;
 }
 
 /* row #3 */
 .popular-container__hotel-bleu-blanc {
-    grid-column: 2 / 2;
-    grid-row: 5 / 5;
+    grid-area: hotel-bleu-blanc;
 }
     /* general properties of popular cards */
 
 /* common margin and appearence */
 .popular-container a {
     background-color: white;
-    padding: 5px;
+    padding: 1.4%;
     border-radius: 20px;
     /* layout inside of each popular card */
     display: flex;
@@ -522,7 +502,7 @@ img {
     justify-content: space-between;
 }
 
-    /* popular-container image scale */
+    /* cards-popular-containerimage scale */
 .popular-container img {
     width: 127px;
     height: 134px;
@@ -534,6 +514,7 @@ img {
 /* layout card description popular */
 .card-description-popular {
     padding: 0 45px 9px 20px;
+    width: 100%;
     grid-column: 3 / 3;
     grid-row: 1 / 1;
 }
@@ -629,33 +610,21 @@ img {
 
 /* FOOTER */
 footer {
+    margin-top: 60px;
     height: 218px;
     width: 100%;
     background-color: #F2F2F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
     /* layout footer desktop */
 .footer__content {
-    height: 100%;
-    margin: 60px auto 0 auto;
+    width: 100%;
     max-width: 1340px;
-    /* background-color: brown; */
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-area: "about accomodations assistance";
-}
-
-.footer__content__about {
-    grid-area: "about";
-}
-
-.footer__content__our-accommodations {
-    grid-area: "accomodations";
-}
-
-.footer__content__assistance {
-    grid-area: "assistance";
+    display: flex;
+    justify-content: space-between;
 }
 
     /* flexbox inside of each details footer elements */
@@ -682,30 +651,57 @@ footer a:hover {
 
 /* RESPONSIVE */
 
+@media screen and (max-width: 1350px) {
+
+    header, main, .footer__content {
+        width: 98%;
+    }
+
 /* RESPONSIVE LODGING */
-/* popular section above lodging section */
-@media screen and (max-width: 1340px) {
+    /* popular section above lodging section */
     .content-lodging {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 0.25fr 1fr;
         row-gap: 30px;
         grid-template-areas: 
         "popular"
         "housing";
+        margin: auto;
+    
     }
 
-    .popular-container {
+    .housing-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .content__popular__title i, .content__popular h2, .content__popular h3, .content__popular__title {
+        padding: 0;
+        margin: 0;
+    }
+
+    .popular-container{
+        margin: auto;
+        padding: 2%;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
+        grid-template-rows: 1fr 3fr;
         column-gap: 20px;
+        row-gap: 0;
+        grid-template-areas:
+        "popular-title popular-title popular-title"
+        "soleil-du-matin coeur-de-l-eau hotel-bleu-blanc";
+    }
+    
+    .card-description-popular {
+        padding: 5px 0 5px 5px;
+    }
+
+    /* housing-container grid resizing */
+    .housing-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
     }
 }
 
 /* RESPONSIVE FOOTER */
-@media screen and (max-width: 600px) {
-    .footer__content {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-area: "about accomodations assistance";
-    }
-}
