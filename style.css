@@ -38,44 +38,41 @@ header {
     /* topbar dimensions and layout */
 .topbar {
     display: grid;
-    height: 90px;
-    grid-template-columns: 6.8% 5fr 12.09% 10.15% 10.15%;
-    grid-template-rows: 1fr;
+    grid-template-columns: 97px 5fr 167px 162px 162px;
+    grid-template-rows: 90px;
+    grid-template-areas: "logo-bar . lodging-bar activities-bar sign-up-bar";
 }
 
         /* logo and links horizontal layout inside the topbar */
-.topbar__hint a {
-    box-sizing: border-box;
-    width: 100%;
-}
 
 .topbar > div > a {
     padding-top: 49px;
     padding-bottom: 20px;
 }
 
-.topbar > div {
-    grid-column-end: span 1;
-}
-
 #logo {
+    grid-area: logo-bar;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     height: 90px;
 }
 
+#logo img {
+    width: 97px;
+    height: 45px;
+}
+
 #topbar__hint--housing {
-    grid-column-start: 3;
-    grid-row-start: 1;
+    grid-area: lodging-bar;
 }
 
 #topbar__hint--activities {
-    grid-column-start: 4;
+    grid-area: activities-bar;
 }
 
 #topbar__hint--sign-up {
-    grid-column-start: 5;
+    grid-area: sign-up-bar;
 }
 
     /* links vertical layout */
@@ -125,34 +122,38 @@ header {
 
 /* Main */
     /* main title */
+.main-title {
+    margin: 40px 0 19px 0;
+}
+
 .main-title h1 {
-    margin: 40px 2px 16px;
+    margin: 0 2px 16px;
     font-size: 21px;
     font-weight: bold;
 }
 
 .main-title p {
-    margin: 0px 6px 19px;
+    margin: 0px 6px 0;
     font-size: 17px;
 }
 
 /* search-bar */
 .search-bar {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
     height: 50px;
-    width: 100%;
+    width: 420px;
     border: 1px;
     border-color: #F2F2F2;
-    display: grid;
-    grid-template-columns: 4% 17.5% 10% 1fr;
-    grid-template-rows: 1fr;
 }
     /* map icon */
 .search-bar__locate-icon {
     background-color: #F2F2F2;
     border-radius: 15px 0 0 15px;
-    margin-left: 7.47%;
-    height: 100%;
-    width: 100%;
+    margin-left: 4px;
+    height: 50px;
+    width: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -164,18 +165,22 @@ header {
     border-top: 1px solid #F2F2F2;
     border-bottom: 1px solid #F2F2F2;
     border: 1px;
-    padding: 0 0 0 7.25%;
+    padding: 0 0 0 17px;
     font-size: 18px;
+    height: 100%;
 }
 
     /* search button */
 .search-bar__button {
     border: none;
     border-radius: 0 15px 15px 0;
+    padding: 17px;
     background-color: #0065FC;
     color: white;
     font-size: 17px;
     font-weight: bold;
+    height: 100%;
+    padding: auto;
 }
 
 /* FILTER */
@@ -546,37 +551,6 @@ img {
     grid-template-rows: 190px 45px 45px 165px;
 }
 
-/* common properties of Activities container cards */
-.container__activities a {
-    border-radius: 20px;
-    height: 100%;
-    width: 100%;
-    position: relative;
-}
-
-/* scale image Activities container */
-.container__activities > a > img {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    border-radius: 20px;
-}
-
-/* overlap title of Activities on image */
-.content-activities h3 {
-    font-size: 16px;
-    font-weight: bold;
-    height: 16px;
-    background-color: white;
-    position: absolute;
-    width: 94%;
-    border-radius: 0 0 20px 20px;
-    margin: 0;
-    bottom: 0;
-    left: 0;
-    padding: 22px 0 17px 19px;
-}
-
 /* position of each Activities cards in the grid */
 .container__activities__port {
     grid-column: 1 / 1;
@@ -608,6 +582,37 @@ img {
     grid-row: 3 / 5;
 }
 
+/* common properties of Activities container cards */
+.container__activities a {
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+/* scale image Activities container */
+.container__activities img {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    border-radius: 20px;
+}
+
+/* overlap title of Activities on image */
+.content-activities h3 {
+    font-size: 16px;
+    font-weight: bold;
+    height: 16px;
+    background-color: white;
+    position: absolute;
+    width: 94%;
+    border-radius: 0 0 20px 20px;
+    margin: 0;
+    bottom: 0;
+    left: 0;
+    padding: 22px 0 17px 19px;
+}
+
 /* FOOTER */
 footer {
     margin-top: 60px;
@@ -622,22 +627,26 @@ footer {
     /* layout footer desktop */
 .footer__content {
     width: 100%;
+    margin: auto;
     max-width: 1340px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: flex-start;
 }
 
     /* flexbox inside of each details footer elements */
 .footer__content > div {
     margin: 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    margin: 45px 180px 45px 0;
 }
 
     /* margin footer link */
 footer h2 {
     font-size: 17px;
-    margin: 45px 0 0 0;
+    margin: 0;
 }
 
 footer a {
@@ -650,7 +659,7 @@ footer a:hover {
 }
 
 /* RESPONSIVE */
-
+/* SMALL SCREEN UNDER 1340PX */
 @media screen and (max-width: 1350px) {
 
     header, main, .footer__content {
@@ -670,17 +679,7 @@ footer a:hover {
     
     }
 
-    .housing-container {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        gap: 20px;
-    }
-    
-    .content__popular__title i, .content__popular h2, .content__popular h3, .content__popular__title {
-        padding: 0;
-        margin: 0;
-    }
-
+    /* new layout grid of cards popular */
     .popular-container{
         margin: auto;
         padding: 2%;
@@ -697,11 +696,70 @@ footer a:hover {
         padding: 5px 0 5px 5px;
     }
 
-    /* housing-container grid resizing */
+    /* new layout of housing cards grid */
     .housing-container {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
     }
+
+    /* fixing title inside the cards */
+    .content__popular__title i, .content__popular h2, .content__popular h3, .content__popular__title {
+        padding: 0;
+        margin: 0;
+    }
+
+    /* New layout of activities cards grid */
+    .container__activities {
+        height: 445px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 40px;
+        grid-template-areas:
+        "vieux-port pomegues frioul"
+        "calanques dame-de-la-garde longchamp";
+    }
+
+        /* position of each Activities cards in the grid */
+    .container__activities__port {
+        grid-area: vieux-port;
+    }
+
+    .container__activities__pomegues {
+        grid-area: pomegues;
+    }
+
+    .container__activities__calanques {
+        grid-area: calanques;
+    }
+
+    .container__activities__dame-de-la-garde {
+        grid-area: dame-de-la-garde;
+    }
+
+    .container__activities__iles-frioul {
+        grid-area: frioul;
+    }
+
+    .container__activities__parc-longchamp {
+        grid-area: longchamp;
+    }
+    
 }
 
 /* RESPONSIVE FOOTER */
+
+/* PHONE SCREEN UNDER 600PX */
+@media screen and (max-width: 650px) {
+    /* topbar dimensions and layout */
+    .topbar {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 90px 42px;
+        grid-template-areas:
+        "logo-bar sign-up-bar"
+        "lodging-bar activities-bar";
+    }
+    .topbar > div > a {
+        padding: 10px;
+    }
+}

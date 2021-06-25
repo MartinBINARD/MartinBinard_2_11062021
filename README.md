@@ -3,12 +3,7 @@
 
 ***A fresh stylish vacation booking static webiste***
 
-**Commit #11**
+**Commit #12**
 
-* Add flexbox to popular and housing cards
-* Add reponisve layout popular and layout housing under 1340px
-* Add filter list and wrap responsive
-* Fix overlaping filter wrap bug
-* Fix round filter icon distorsion
-* Add inline block to info p and remove div icon
+* Add flexbox to search-bar and menu-tabs
 * Work in progress : Responisve (phone headers, lodging, activities and footer layout, mediaqueries img)
