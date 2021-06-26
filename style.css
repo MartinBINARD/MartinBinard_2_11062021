@@ -182,6 +182,10 @@ header {
     height: 100%;
     padding: auto;
 }
+    /* hide loop search icon for phone */
+.search-bar__loop {
+    display: none;
+}
 
 /* FILTER */
 /* line up filter content */
@@ -353,8 +357,8 @@ header {
 }
 
             /* container inside housing content */
+                /* layout housing-container cards */
 .housing-container {
-            /* layout housing-container cards */
     width: 100%;
     display: grid;
     grid-template-columns: 246px 246px 246px;
@@ -408,12 +412,12 @@ img {
     margin: 0;
 }
 
-/* .housing-container h3 {
+.housing-container h3 {
     font-size: 16px;
-} */
+}
 
 .housing-container p {
-    /* font-size: 13px; */
+    font-size: 13px;
     margin: 5px 0 5px 0; 
 }
 
@@ -500,6 +504,7 @@ img {
     background-color: white;
     padding: 1.4%;
     border-radius: 20px;
+    margin: 0;
     /* layout inside of each popular card */
     display: flex;
     flex-direction: row;
@@ -539,12 +544,14 @@ img {
 /* ****SECTION #2***** */
 /* Activities content */
 /* delete default title margin */
+
 .content-activities h2 {
     margin: 65px 0 23px;
 }
 
 /* layout desktop grid Activities container */
 .container__activities {
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 44px;
@@ -610,13 +617,13 @@ img {
     margin: 0;
     bottom: 0;
     left: 0;
-    padding: 22px 0 17px 19px;
+    padding: 22px 0 17px 6%;
 }
 
 /* FOOTER */
 footer {
     margin-top: 60px;
-    height: 218px;
+    height: 100%;
     width: 100%;
     background-color: #F2F2F2;
     display: flex;
@@ -626,12 +633,12 @@ footer {
 
     /* layout footer desktop */
 .footer__content {
+    height: 100%;
     width: 100%;
-    margin: auto;
     max-width: 1340px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 
     /* flexbox inside of each details footer elements */
@@ -640,9 +647,12 @@ footer {
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 45px 180px 45px 0;
+    margin: 45px 0 50px 0;
 }
 
+.footer__content__our-accommodations, .footer__content__assistance {
+    padding-left: 12px;
+}
     /* margin footer link */
 footer h2 {
     font-size: 17px;
@@ -661,7 +671,7 @@ footer a:hover {
 /* RESPONSIVE */
 /* SMALL SCREEN UNDER 1340PX */
 @media screen and (max-width: 1350px) {
-
+    /* create margin page */
     header, main, .footer__content {
         width: 98%;
     }
@@ -683,10 +693,9 @@ footer a:hover {
     .popular-container{
         margin: auto;
         padding: 2%;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr 3fr;
-        column-gap: 20px;
-        row-gap: 0;
+        gap: 20px;
         grid-template-areas:
         "popular-title popular-title popular-title"
         "soleil-du-matin coeur-de-l-eau hotel-bleu-blanc";
@@ -711,10 +720,10 @@ footer a:hover {
 
     /* New layout of activities cards grid */
     .container__activities {
-        height: 445px;
+        height: 500px;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        gap: 40px;
+        grid-template-rows: 50% 50%;
+        gap: 30px;
         grid-template-areas:
         "vieux-port pomegues frioul"
         "calanques dame-de-la-garde longchamp";
@@ -747,19 +756,81 @@ footer a:hover {
     
 }
 
-/* RESPONSIVE FOOTER */
+/* RESPONSIVE FOOTER FOR TABLET */
+@media screen and (max-width: 950px) {
+    .footer__content > div {
+        margin: 22px 0 22px 30px;
+        padding: 0;
+    }
+
+    .footer__content {
+        flex-direction: column;
+        padding: 23px 0 23px 0;
+    }
+}
+
+/* RESPONSIVE POPULAR AND HOUSING UNDER 890PX */
+@media screen and (max-width: 890px) {
+    /* PPOPULAR CARDS LINE UP UNDER 890PX */
+    .popular-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.25fr repeat(3, 1fr);
+        grid-template-areas:
+        "popular-title"
+        "soleil-du-matin"
+        "coeur-de-l-eau"
+        "hotel-bleu-blanc";
+        padding: 5%;
+    }
+    /* full width of popular cards */
+    .content__popular {
+        display: block;
+    }
+    /* HOUSING CARDS 2 COLUMNS LINE UP UNDER 890PX */
+    .housing-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+        "cannebiere harbor"
+        "mouettes sea"
+        "panier amina";
+    }
+    /* resize padding between housing cards grid and grey housing block */
+    /* .content__housing {
+        padding: 3%;
+    } */
+}
 
 /* PHONE SCREEN UNDER 600PX */
 @media screen and (max-width: 650px) {
     /* topbar dimensions and layout */
     .topbar {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 90px 42px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
         "logo-bar sign-up-bar"
         "lodging-bar activities-bar";
     }
     .topbar > div > a {
         padding: 10px;
+    }
+    /* reverse active and hover tab  */
+    .topbar__hint {
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+    }
+    
+    /* position img logo  */
+    #logo img{
+        padding: 0 0 20px 20px;
+    }
+
+    /* position sign-up link */
+    #topbar__hint--sign-up {
+        align-items: flex-end;
+    }
+
+    #sign-up__link {
+        padding-right: 20px;
     }
 }
