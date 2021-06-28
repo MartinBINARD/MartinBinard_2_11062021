@@ -134,7 +134,7 @@ header {
 
 .main-title p {
     margin: 0px 6px 0;
-    font-size: 17px;
+    font-size: 16px;
 }
 
 /* search-bar */
@@ -180,7 +180,6 @@ header {
     font-size: 17px;
     font-weight: bold;
     height: 100%;
-    padding: auto;
 }
     /* hide loop search icon for phone */
 .search-bar__loop {
@@ -250,7 +249,6 @@ header {
     margin-right: 12px;
     background-color: #DEEBFF ;
     border-radius: 500px;
-    /* margin-right: 8%; */
 }
 
                 /* color of filter icons */
@@ -259,21 +257,25 @@ header {
 }
 
 /* info-bar */
-.info-bar p{
-    display: inline;
-    margin:0;
-}
-
 .info-bar {
     margin: 40px 0 40px 9px;
+    display: flex;
+    flex-direction: row;
 }
 
 .info-bar i {
+    display: inline;
     color: #0065FC;
     border: 1px solid #F2F2F2;
     border-radius: 5000px;
     padding: 3px 7px;
+    height: 100%;
+}
 
+.info-bar p{
+    display: inline-flex;
+    margin: 2px 0 0 11px;
+    font-size: 16px;
 }
 
 /* *******SECTION #1****** */
@@ -284,7 +286,6 @@ header {
     gap: 40px;
     grid-template-rows: 626px;
     grid-template-areas: "housing popular";
-    background-color: coral;
 }
 
         /* Common BOX SHADOW card properties */
@@ -474,7 +475,7 @@ img {
     display: grid;
     grid-template-columns: 343px;
     grid-template-rows: 60px 144px 144px 144px;
-    row-gap: 33px;
+    gap: 33px;
     grid-template-areas:
     "popular-title"
     "soleil-du-matin"
@@ -620,6 +621,23 @@ img {
     padding: 22px 0 17px 6%;
 }
 
+/* Hide small images for big devices */
+.medium-img-vieux-port{
+    display: block;
+}
+
+.small-img-vieux-port {
+    display: none;
+}
+
+.medium-img-calanques {
+    display: block;
+}
+
+.small-img-calanques {
+    display: none;
+}
+
 /* FOOTER */
 footer {
     margin-top: 60px;
@@ -692,7 +710,7 @@ footer a:hover {
     /* new layout grid of cards popular */
     .popular-container{
         margin: auto;
-        padding: 2%;
+        padding: 37px 0;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr 3fr;
         gap: 20px;
@@ -716,6 +734,11 @@ footer a:hover {
     .content__popular__title i, .content__popular h2, .content__popular h3, .content__popular__title {
         padding: 0;
         margin: 0;
+    }
+
+    /* fixing activities cards grid overlapping footer */
+    .content-activities {
+        padding-bottom: 60px;
     }
 
     /* New layout of activities cards grid */
@@ -753,7 +776,22 @@ footer a:hover {
     .container__activities__parc-longchamp {
         grid-area: longchamp;
     }
+    /* load images for small devices */
+    .medium-img-vieux-port{
+        display: none;
+    }
+
+    .small-img-vieux-port {
+        display: block;
+    }
+
+    .medium-img-calanques {
+        display: none;
+    }
     
+    .small-img-calanques {
+        display: block;
+    }
 }
 
 /* RESPONSIVE FOOTER FOR TABLET */
@@ -780,7 +818,7 @@ footer a:hover {
         "soleil-du-matin"
         "coeur-de-l-eau"
         "hotel-bleu-blanc";
-        padding: 5%;
+        /* padding: 5%; */
     }
     /* full width of popular cards */
     .content__popular {
@@ -795,14 +833,32 @@ footer a:hover {
         "mouettes sea"
         "panier amina";
     }
-    /* resize padding between housing cards grid and grey housing block */
-    /* .content__housing {
-        padding: 3%;
-    } */
+
+    /* ACTIVITES CARDS 2 COLUMNS LINE UP UNDER 890PX */
+    .container__activities {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 33%);
+        grid-template-areas: 
+        "vieux-port pomegues"
+        "frioul calanques"
+        "dame-de-la-garde longchamp";
+    }
 }
 
 /* PHONE SCREEN UNDER 600PX */
 @media screen and (max-width: 650px) {
+    /* PHONE DISPLAY */
+    /* Delete margin page */
+    header, main, .footer__content {
+        width: 100%;
+    }
+
+    /* Remove background round corners on popular & housing  */
+    .content__housing, .content__popular {
+        border-radius: 0;
+    }
+
+    /* TOPBAR */
     /* topbar dimensions and layout */
     .topbar {
         grid-template-columns: repeat(2, 1fr);
@@ -811,9 +867,16 @@ footer a:hover {
         "logo-bar sign-up-bar"
         "lodging-bar activities-bar";
     }
+
+   /* ovoid phone wrap ovelapping main title */
+    main {
+        padding-top: 35px;
+    }
+
     .topbar > div > a {
         padding: 10px;
     }
+
     /* reverse active and hover tab  */
     .topbar__hint {
         flex-direction: column-reverse;
@@ -832,5 +895,98 @@ footer a:hover {
 
     #sign-up__link {
         padding-right: 20px;
+    }
+
+/* RESET COMMON MARGIN AND PADDING TO MAIN CONTENT  */
+    .main-title, .search-bar, .filter {
+        margin-left: 20px;
+    }
+    .main-title h1 {
+        margin-right: 30px;
+    }
+
+    .filter-tab {
+        margin: 15px 11px 0 0;
+    }
+    
+    .info-bar {
+        margin: 30px 0 35px 20px;
+    }
+
+/* SEARCH BAR */
+    /* hide classic search button */
+    .search-bar__button {
+        display: none;
+    }
+        /* display loop search icon for phone */
+    .search-bar__loop {
+        display: block;
+        border: none;
+        border-radius: 15px;
+        padding: 17px;
+        background-color: #0065FC;
+        color: white;
+        font-size: 17px;
+        font-weight: bold;
+        height: 51px;
+        width: 51px;
+    }
+
+    .search-bar {
+        height: 51px;
+        width: 333px;
+    }
+    .search-bar__locate-icon, .filter-list {
+        margin: 0;
+        padding: 0;
+    }
+
+/* COMMON SETTING SECTIONS */
+    .content__popular, .content__housing, .content-activities {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .housing-container, .popular-container {
+        gap: 10px;
+    }
+
+    .content__housing {
+        background-color: white;
+    }
+
+/* HOUSING SECTION LINE UP TO 1 COLUMN UNDER 650PX */
+    .housing-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas: 
+        "cannebiere"
+        "harbor"
+        "mouettes"
+        "sea"
+        "panier"
+        "amina";
+    }
+    
+    .content__housing {
+        padding: 45px 20px;
+    }
+    
+/* ACTIVITIES LINE UP TO 1 COLUMN UNDER 650PX */
+    .container__activities {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 50%);
+        grid-template-areas: 
+        "vieux-port"
+        "pomegues"
+        "frioul"
+        "calanques"
+        "dame-de-la-garde"
+        "longchamp";
+    }
+
+    .content-activities {
+        height: 1760px;
+        padding: 2%;
     }
 }
