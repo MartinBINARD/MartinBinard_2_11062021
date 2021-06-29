@@ -191,7 +191,7 @@ header {
 
 /* Preferences filter */
 .filter {
-    width: 100%;
+    width: auto;
     margin: 31px 0 0 13px;
 }
 
@@ -348,6 +348,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    padding: 0 20px;
 }
 
             /* housing content title */
@@ -641,7 +642,6 @@ img {
 /* FOOTER */
 footer {
     margin-top: 60px;
-    height: 100%;
     width: 100%;
     background-color: #F2F2F2;
     display: flex;
@@ -662,7 +662,7 @@ footer {
     /* flexbox inside of each details footer elements */
 .footer__content > div {
     margin: 0;
-    width: 100%;
+    width: auto;
     display: flex;
     flex-direction: column;
     margin: 45px 0 50px 0;

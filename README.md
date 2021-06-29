@@ -1,15 +1,15 @@
 # MartinBinard_2_11062021
 **Projet 2**
 
-***A fresh stylish vacation booking static webiste***
+***A fresh stylish vacation booking static webiste called Reservia***
 
-**Commit #14**
+**Commit #15**
 
 * HTML / CSS FRONT-END DONE
-* Add line up housing, popular & activities cards for screen width under 690px
-* Add css properties to search loop icon for phone screen size
-* Add small pictures of vieux-port and calanques for screen width under 1340px
-* Add padding top to main when switching to phone size
-* Add padding-bottom to fix activities cards grid overlapping footer
-* Add an inline-flex for the line break on the info bar
+* Remove page offset by adding width: auto to filter and footer__content div
+* Add padding left & right to content__popular
 * Pass W3C validator
+
+# Website link:
+
+[Reservia website](https://martinbinard.github.io/MartinBinard_2_11062021/)
