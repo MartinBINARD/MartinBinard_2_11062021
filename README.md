@@ -3,11 +3,10 @@
 
 ***A fresh stylish vacation booking static webiste called Reservia***
 
-**Commit #15**
+**Commit #16**
 
 * HTML / CSS FRONT-END DONE
-* Remove page offset by adding width: auto to filter and footer__content div
-* Add padding left & right to content__popular
+* Correct container__activities cards title width to 94.5%
 * Pass W3C validator
 
 # Website link:
