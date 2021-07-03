@@ -3,7 +3,7 @@
 
 ***A fresh stylish vacation booking static webiste called Reservia***
 
-**Commit #18**
+**Commit #20**
 
 * HTML / CSS FRONT-END DONE
 * Add patch of fontawesome kit
