@@ -13,6 +13,7 @@ body {
     font-family: 'Raleway', sans-serif;
     background-color: #ffffff;
 }
+
 /* general links properties */
 a {
     text-decoration: none;
@@ -180,10 +181,12 @@ header {
     font-size: 17px;
     font-weight: bold;
     height: 100%;
+    cursor: pointer;
 }
     /* hide loop search icon for phone */
 .search-bar__loop {
     display: none;
+    cursor: pointer;
 }
 
 /* FILTER */
@@ -282,10 +285,11 @@ header {
 /* .content-lodging section */
 .content-lodging {
     display: grid;
-    grid-template-columns: 880px 420px;
-    gap: 40px;
+    grid-template-columns: 59,7% 31.34%;
+    gap: 2.98%;
     grid-template-rows: 626px;
     grid-template-areas: "housing popular";
+    width: fit-content;
 }
 
         /* Common BOX SHADOW card properties */
@@ -336,8 +340,7 @@ header {
     border-radius: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 45px 40px;
+    padding: 45px 5.11%;
 }
 
 .content__popular {
@@ -363,9 +366,9 @@ header {
 .housing-container {
     width: 100%;
     display: grid;
-    grid-template-columns: 246px 246px 246px;
-    grid-template-rows: 199px 199px;
-    gap: 30px;
+    grid-template-columns: repeat(3, 30.75%);
+    grid-template-rows: repeat(2, 22,61%);
+    gap: 3.75%;
     grid-template-areas: 
     "cannebiere harbor mouettes"
     "sea panier amina";
@@ -474,6 +477,7 @@ img {
     border-radius: 50px;
     width: auto;
     display: grid;
+    /* grid-template-columns: 343px; */
     grid-template-columns: 343px;
     grid-template-rows: 60px 144px 144px 144px;
     gap: 33px;
@@ -687,12 +691,16 @@ footer a:hover {
 }
 
 /* RESPONSIVE */
-/* SMALL SCREEN UNDER 1340PX */
-@media screen and (max-width: 1350px) {
+/* LAPTOP UNDER 1340px */
+@media screen and (max-width: 1340px) {
     /* create margin page */
     header, main, .footer__content {
         width: 98%;
     }
+}
+
+/* SMALL SCREEN UNDER 1023PX */
+@media screen and (max-width: 1023px) {
 
 /* RESPONSIVE LODGING */
     /* popular section above lodging section */
@@ -818,7 +826,6 @@ footer a:hover {
         "soleil-du-matin"
         "coeur-de-l-eau"
         "hotel-bleu-blanc";
-        /* padding: 5%; */
     }
     /* full width of popular cards */
     .content__popular {

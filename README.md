@@ -3,11 +3,12 @@
 
 ***A fresh stylish vacation booking static webiste called Reservia***
 
-**Commit #16**
+**Commit #17**
 
 * HTML / CSS FRONT-END DONE
-* Correct container__activities cards title width to 94.5%
-* Pass W3C validator
+* Add kit fontawesome instead of cdn fontawesome to prevent extension unknown warning W3C errors
+* Add css grids percentage width to housing-container & popular-container
+* Add percentage padding left & right of housing__content &  popular__content
 
 # Website link:
 
