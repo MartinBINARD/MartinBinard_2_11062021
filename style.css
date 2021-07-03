@@ -340,7 +340,7 @@ header {
     border-radius: 50px;
     display: flex;
     flex-direction: column;
-    padding: 45px 5.11%;
+    padding: 45px 4.5%;
 }
 
 .content__popular {
@@ -423,7 +423,6 @@ img {
 
 .housing-container p {
     font-size: 13px;
-    margin: 5px 0 5px 0; 
 }
 
 /* layout of each housing cards */
