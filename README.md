@@ -3,10 +3,12 @@
 
 ***A fresh stylish vacation booking static webiste called Reservia***
 
-**Commit #20**
+**Commit #21**
 
 * HTML / CSS FRONT-END DONE
-* Add patch of fontawesome kit
+* Add individual kit fontawesome
+* Add housing-container 2 * 2fr rows
+* Add grid-column-template 2fr 1fr to lodging-content
 
 # Website link:
 

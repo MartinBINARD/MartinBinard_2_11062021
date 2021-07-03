@@ -1,4 +1,4 @@
-/* Font Raleway */
+/* FONTS IMPORTATION */
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 /* HTML formating */
@@ -285,7 +285,7 @@ header {
 /* .content-lodging section */
 .content-lodging {
     display: grid;
-    grid-template-columns: 59.7% 31.34%;
+    grid-template-columns: 2fr 1fr;
     gap: 2.98%;
     grid-template-rows: 626px;
     grid-template-areas: "housing popular";
@@ -367,7 +367,7 @@ header {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 30.75%);
-    grid-template-rows: repeat(2, 22.61%);
+    grid-template-rows: repeat(2, 199px);
     gap: 3.75%;
     grid-template-areas: 
     "cannebiere harbor mouettes"
